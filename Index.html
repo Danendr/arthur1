@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tugas B.indo</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">TEAM</a>
+            <ul>
+                <li><a href="#Latar_Belakang" class="active">Home</a></li>
+                <li><a href="#Pengalaman">Profile</a></li>
+                <li><a href="#KESAN SELAMA MENAGAJAR">Contact</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="stars.png" id="stars">
+            <img src="matahari.png" id="moon">
+            <img src="mountains_behind.png" id="mountains_behind">
+            <h2 id="text">BIOGRAFI</h2>
+            <a href="#sec" id="btn">Explore</a>
+            <img src="mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec" id="sec">
+            <h2>Latar Belakang</h2>
+            <p>Komang Wiwik Aryani lahir di Desa Kayu Putih, Singaraja, Denpasar Bali pada tanggal 17 Desember 1988.
+            <br>Dia memiliki suami dan satu orang putri. Komang Wiwik Aryani berprofesi sebagai seorang guru di SMK TI BALI GLOBAL DENPASAR.
+            <br>Bu wiwik merupakan guru yang mengajar bahasa Bali di SMK TI BALI GLOBAL DENPASAR.
+            <br>Pendidikan terakhir dari bu Wiwik adalah Universitas Hindu Indonesia dengan jurusan predikat agama.</P>
+            <br>
+            <h2>Pengalaman</h2>
+            <p>menjadi tenaga kerja administrasi di suatu perusahaan yang bergerak dalam bidang marketing, pembagian tiket, dan juga administrasi.
+            <br>setelah itu, bekerja di hiprobendin dan setelah semua itu baru melamar di SMK TI BALI GLOBAL DENPASAR.
+            <br>Beliau sudah mengajar di SMK TI BALI GLOBAL DENPASAR kurang lebih selama 12 tahun sejak tahun 2011.</p>
+            <br> 
+            <h2>KESAN SELAMA MENGAJAR</h2>
+            <p>Banyak sekali kejadian kejadian yang terjadi selama beliau mengajar dari yang baik hingga ke buruk.
+            <br>Salah satu contoh kejadian yang membuat down adalah keluarga dan kendala-kendala yang dihadapi selama mengajar seperti kurangnya mempersiapkan materi dalam proses pembelajaran dan kadang juga timbul kurang rasa percaya diri dalam memparaf materi.
+            <br>Namun Banyaknya motivasi untuk bekerja yang memberikan semangat yaitu adalah orang tua yang selalu mensupport dalam melaksanakan aktifitas. Kedua juga ada suami dan juga anak yang memberikan semangat agar lebih semangat dalam melakukan aktifitas.
+            </P>
+        </div>
+
+        <script>
+            let stars = document.getElementById('stars');
+            let moon= document.getElementById('moon');
+            let mountains_behind= document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let mountains_front = document.getElementById('mountains_front');
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value *0.25 + 'px';
+                moon.style.top = value *1.05 + 'px';
+                mountains_behind.style.top = value *0.5 + 'px';
+                mountains_front.style.top = value *0 + 'px';
+                text.style.marginRight = value *4 + 'px';
+                text.style.marginTop = value *1.5 + 'px';
+                btn.style.marginTop = value *1.5 + 'px';
+                header.style.top = value *0.5 + 'px';
+            })
+        </script>
+    </body>
+    </html>
